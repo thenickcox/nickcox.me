@@ -44,13 +44,20 @@ h1:not(.name)
   font-weight: 700
 
 h2
-  font-size: 17px
-  line-height: 17px
-  font: 15px/15px $headline
-  font-weight: 500
+  font: 16px/18px $headline
+  font-weight: 400
 
   .dates
     float: right
+    &.tss
+      position: relative
+      bottom: 18px
+      /* fix weird wrapping thing */
+      height: 0
+
+  .line-2
+    margin-left: 0.275in
+    display: block
 
 p, li
   font: 15px/23px $body
@@ -60,22 +67,40 @@ ul
   margin-left: 0
   padding-left: 0
 
+ul > li
+  margin-bottom: 0.1in
+
+li > h2
+  margin: 0.3in 0 0.1in 0
+
 .experience h1 + ul
   list-style: none
 
 ul li ul
   list-style: disc
 
-li h2
-  margin-bottom: 0
-
 .article-title, .talk-title
   font-style: italic
   display: block
+  font-weight: 500
+
+section > ul
+  list-style: none
+
+h1 + ul
+  width: 7.5in
+  margin: 0 auto
+
+.education h2
+  margin: 0
 
 @media only print
   body
     border: none
     margin: 0 auto 0.5in auto
-  section, ul, li
+  li
     page-break-inside: avoid
+    page-break-after: avoid
+    orphans: 3
+    widows: 3
+
