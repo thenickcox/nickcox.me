@@ -1,0 +1,63 @@
+$headline: 'Gotham SSm A', 'Gotham SSm B' normal
+$body: 'Whitney SSm A', 'Whitney SSm B' normal
+
+html
+  background: #eee
+  color: #000
+
+header
+  text-align: center
+  h1
+    font: 25px/25px $headline
+    font-weight: 700
+    margin-bottom: 0
+  addr, span
+    font: 16px/20px $body
+    font-weight: 400
+    display: block
+
+
+body
+  background: #fff
+  width: 8.5in
+  padding: 0.5in
+  margin: 0.5in auto
+  border: 1px solid #e0e0e0
+
+section
+  margin: 0.25in 0
+
+h1
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.name
+  font: 20px/20px $headline
+  font-weight: 700
+
+h1:not(.name)
+  border-top: 1px solid #000
+  padding-top: 5px
+  font: 17px/17px $headline
+  font-weight: 700
+
+h2
+  font-size: 17px
+  line-height: 17px
+  font: 15px/15px $headline
+  font-weight: 500
+
+p, li
+  font: 15px/23px $body
+  font-weight: 400
+
+ul
+  margin-left: 0
+  padding-left: 0
+
+.experience h1 + ul
+  list-style: none
+
+ul li ul
+  list-style: disc
