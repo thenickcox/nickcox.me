@@ -1,1 +1,2 @@
-//= require_tree .
+//= require chart.min
+//= require charting
