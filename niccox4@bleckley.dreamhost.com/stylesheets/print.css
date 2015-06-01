@@ -1,0 +1,176 @@
+/* line 5, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+html {
+  background: #eee;
+  color: #000; }
+
+/* line 9, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+header {
+  text-align: center; }
+  /* line 11, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  header h1 {
+    font: 25px/25px "Gotham SSm A", "Gotham SSm B" normal;
+    font-weight: 700;
+    margin-bottom: 10px; }
+  /* line 15, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  header addr, header span {
+    font: 16px/20px "Whitney SSm A", "Whitney SSm B" normal;
+    font-weight: 400;
+    display: block;
+    line-height: 1; }
+  /* line 20, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  header img {
+    margin-right: 3px;
+    position: relative;
+    top: 3px; }
+
+/* line 26, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+body {
+  background: #fff;
+  width: 8.5in;
+  padding: 0in 0.25in 0.1in 0.25in;
+  margin: 0.5in auto 0.5in auto;
+  border: 1px solid #e0e0e0; }
+
+/* line 33, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.container {
+  display: inline-block; }
+
+/* line 36, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.speaking-writing {
+  float: left;
+  width: 2in;
+  margin: 0.25in 0 0 0.1in; }
+  /* line 40, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  .speaking-writing ul {
+    margin-left: 0.2in; }
+  /* line 42, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  .speaking-writing li {
+    font: 15px/19px "Whitney SSm A", "Whitney SSm B" normal normal; }
+
+/* line 45, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.main {
+  float: left;
+  width: 6in; }
+
+/* line 49, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+section {
+  margin: 0.25in 0; }
+
+/* line 52, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+/* line 57, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.name {
+  font: 20px/20px "Gotham SSm A", "Gotham SSm B" normal;
+  font-weight: 700; }
+
+/* line 61, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+h1:not(.name) {
+  border-top: 1px solid #148c71;
+  padding-top: 5px;
+  font: 17px/17px "Gotham SSm A", "Gotham SSm B" normal;
+  font-weight: 700; }
+
+/* line 67, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+h2 {
+  font: 16px/18px "Gotham SSm A", "Gotham SSm B" normal;
+  font-weight: 400; }
+  /* line 70, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  h2 strong {
+    display: block; }
+  /* line 73, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  h2 .dates {
+    float: right; }
+    /* line 75, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+    h2 .dates.tss {
+      position: relative;
+      bottom: 18px;
+      /* fix weird wrapping thing */
+      height: 0; }
+  /* line 81, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  h2 .line-2 {
+    margin-left: 0.275in;
+    display: block; }
+
+/* line 85, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+p, li {
+  font: 15px/22px "Whitney SSm A", "Whitney SSm B" normal;
+  font-weight: 400; }
+
+/* line 89, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+ul {
+  margin-left: 0;
+  padding-left: 0; }
+
+/* line 93, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+ul > li {
+  margin-bottom: 0.1in; }
+
+/* line 96, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+li > h2 {
+  margin: 0.3in 0 0.1in 0; }
+
+/* line 99, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.experience h1 + ul {
+  list-style: none; }
+
+/* line 102, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+ul li ul {
+  list-style: disc; }
+
+/* line 105, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.article-title, .talk-title {
+  font-style: italic;
+  display: block;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 14px 0 3px 0; }
+
+/* line 112, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+section > ul {
+  list-style: none; }
+
+/* line 115, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.main h1 + ul, .main h1 + p {
+  width: 5.5in;
+  margin: 0 auto; }
+
+/* line 119, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.education h2 {
+  margin: 0; }
+
+/* line 122, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+#chart {
+  width: 100%;
+  height: 4.5in; }
+
+/* line 126, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.chart {
+  page-break-before: always; }
+
+/* line 129, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+figcaption {
+  margin: 1em 0;
+  text-align: center;
+  font: 15px/15px "Gotham SSm A", "Gotham SSm B" normal; }
+
+/* line 134, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+.oss li {
+  line-height: 1.35;
+  margin: 0; }
+
+@media only print {
+  /* line 140, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  body {
+    border: none;
+    margin: 0 auto 0.5in auto; }
+
+  /* line 143, /Users/nick/sites/nickcox.me/source/stylesheets/print.sass */
+  li {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    orphans: 3;
+    widows: 3; } }

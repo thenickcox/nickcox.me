@@ -1,0 +1,70 @@
+$color: #1e967b
+
+body
+  height: 100%
+  max-height: 100%
+  font-size: 1.9rem
+  line-height: 1.55em
+  color: #323232
+  font-family: "Gotham SSm A","Gotham SSm B"
+  font-weight: 300
+
+.color-band
+  height: 5px
+  width: 100%
+  background: #1e967b
+  -webkit-transition: background .15s ease-in-out
+
+.container
+  width: 92%
+  max-width: 800px
+  margin: 4em auto
+  text-align: center
+
+h1
+  font-family: "Tungsten Cond A","Tungsten Cond B"
+  font-weight: 600
+  font-style: normal
+  line-height: .8
+  margin-bottom: .5em
+  margin-top: 0
+  font-size: 7rem
+  text-transform: uppercase
+  letter-spacing: .015em
+  text-align: center
+  margin-bottom: -1rem
+
+h2
+  font-family: "Gotham SSm A","Gotham SSm B"
+  font-weight: 300
+  text-align: center
+  font-size: 1.67rem
+
+ul
+  margin: 0 auto
+  display: inline-block
+  list-style: none
+  width: 100%
+  padding: 0
+  li
+    float: left
+    margin: 1.9%
+    width: 29.533333%
+    text-align: center
+    @media (screen and max-width: 450px)
+      font-size: 1.33rem
+
+a
+  color: $color
+  text-decoration: none
+  &:hover
+    color: $color - 20
+    border-bottom: 1px solid $color - 20
+
+img
+  background: #fff
+  padding: 8px
+  border: 1px solid #dedede
+  border-radius: 500px
+  padding: 0.3em 0.3em
+  margin: 0 auto
