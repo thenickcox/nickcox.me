@@ -11,57 +11,35 @@
 
 %hr
 
-#thatsmyjam
-  %p.listening-to My current jam:
-  .jam-images
-    %img.jam-avatar{ src: 'http://www.thisismyjam.com/includes/image/logo_beta@2x.png' }
-    %img.user-avatar{ src: 'https://s3.amazonaws.com/thisismyjam/i/avtr_f11c2c16bf41af41dca36460e289d088_80.jpg' }
-  .jam-body
-    %header.jam-header
-      %h2.jam-title
-        %a{ href: 'https://www.thisismyjam.com/thenickcox/_a6te7lx' } ZZZ Top
-      %h3.jam-artist
-        by
-        %span Aesop Rock
-    %figcaption.jam-caption The beat and lyrics go together magically. What delivery!
-    %small.jam-posted
-      Posted
-      %date Sat, 20 Jun 2015
-    %cite.jam-cite
-      Retrieved by the
-      %a{ href: 'https://api.thatsmyjam.com' } That’s My Jam API
+#thatsmyjam{ 'data-tmj-username' => 'thenickcox' }
 
-:coffeescript
-  class App
-    constructor: (request) ->
-      @request = request
-
-    initRequest: =>
-      @request.open('GET', '/thenickcox.json', { async: false })
-
-    sendRequest: =>
-      @initRequest()
-      @request.send()
-      this
-
-    populateDom: =>
-      self = @
-      @request.addEventListener 'loadend', ->
-        if @status is 200 && @response
-          resp = self.responseAsJSON(@response)
-          person = resp.person
-          self.domHook.innerHTML = self.setImageLink(person.avatarNormal, person.apiUrl)
-          self.domHook.innerHTML += '<p>foo</p>'
-
-    responseAsJSON: (resp) =>
-      JSON.parse(resp)
-
-    domHook:
-      document.getElementById('thatsmyjam')
-
-    setImageLink: (img, url) =>
-      "<a href='" + url + "'><img src='" + img + "'></a>"
-
-  #req = new XMLHttpRequest()
-  #window.app = new App(req)
-  #window.app.sendRequest().populateDom()
+:plain
+  <script id='tmj-template' type='x-tmpl-mustache'>
+    <div class='thatsmyjam'>
+      <p class='listening-to'>My current jam:</p>
+      <div class='jam-images'>
+        <img class='jam-avatar' src='http://www.thisismyjam.com/includes/image/logo_beta@2x.png'>
+        <img class='user-avatar' src={{person.avatarSmall}}>
+      </div>
+      <div class='jam-body'>
+        <header class='jam-header'>
+          <h2 class='jam-title'>
+            <a href={{person.currentJam}}>{{jam.title}}</a>
+          </h2>
+          <h3 class='jam-artist'>
+            by
+            <span>{{jam.artist}}</span>
+          </h3>
+        </header>
+        <figcaption class='jam-caption'>{{jam.caption}}</figcaption>
+        <small class='jam-posted'>
+          Posted
+          <date id='jam-creation-date'>{{jam.creationDate}}</date>
+        </small>
+        <cite class='jam-cite'>
+          Retrieved from the
+          <a href='https://api.thatsmyjam.com'>That’s My Jam API</a>
+        </cite>
+      </div>
+    </div>
+  </script>
