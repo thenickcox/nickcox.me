@@ -1,0 +1,30 @@
+{
+  "person": {
+  "name": "thenickcox",
+  "fullname": "Nick Cox",
+  "avatarNormal": "http://static01.thisismyjam.com/i/avtr_f11c2c16bf41af41dca36460e289d088_128.jpg",
+  "avatarSmall": "http://static01.thisismyjam.com/i/avtr_f11c2c16bf41af41dca36460e289d088_small.jpg",
+  "bio": "Software engineer in Seattle, WA",
+  "followersCount": 13,
+  "followers": "http://api.thisismyjam.com/1/thenickcox/followers.json",
+  "followingCount": 10,
+  "following": "http://api.thisismyjam.com/1/thenickcox/following.json",
+  "jamCount": 16,
+  "jamsCount": 16,
+  "jams": "http://api.thisismyjam.com/1/thenickcox/jams.json",
+  "hasCurrentJam": false,
+  "currentJam": null,
+  "joinedDate": "Thu, 30 Aug 2012 17:42:18 +0000",
+  "representativeArtists": [
+    "Land of Talk",
+    "Kendrick Lamar",
+    "Daughter",
+    "Des Ark"
+  ],
+  "url": "http://www.thisismyjam.com/thenickcox",
+  "apiUrl": "http://api.thisismyjam.com/1/thenickcox.json",
+  "background": "http://static03.thisismyjam.com/bg/25c8a78b7c72f3c7686929c0901f88b9971109313.jpg",
+  "twitterName": "_thenickcox",
+  "facebookID": "100002108423987"
+  }
+}

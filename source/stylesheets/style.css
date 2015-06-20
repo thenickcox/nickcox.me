@@ -1,0 +1,145 @@
+body {
+  height: 100%;
+  max-height: 100%;
+  font-size: 1.9rem;
+  line-height: 1.55em;
+  color: #323232;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: 300; }
+
+.color-band {
+  height: 5px;
+  width: 100%;
+  background: #1e967b;
+  -webkit-transition: background 0.15s ease-in-out; }
+
+.container {
+  width: 92%;
+  max-width: 800px;
+  margin: 4em auto;
+  text-align: center; }
+
+h1 {
+  font-family: "Tungsten Cond A", "Tungsten Cond B";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 0.8;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  font-size: 7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  text-align: center;
+  margin-bottom: -1rem; }
+
+h2 {
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.67rem; }
+
+ul {
+  margin: 0 auto;
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+  padding: 0; }
+  ul li {
+    float: left;
+    margin: 1.9%;
+    width: 29.53333%;
+    text-align: center; }
+    @media (max-width: 450px) {
+      ul li {
+        font-size: 1.33rem; } }
+
+a {
+  color: #1e967b;
+  text-decoration: none; }
+  a:hover {
+    color: #0a8267;
+    border-bottom: 1px solid #0a8267; }
+
+.portrait {
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #dedede;
+  border-radius: 500px;
+  padding: 0.3em 0.3em;
+  margin: 0 auto; }
+
+hr {
+  border-style: none;
+  background: #dedede;
+  height: 1px; }
+
+/* THIS IS MY JAM! */
+#thatsmyjam {
+  text-align: left;
+  display: inline-block; }
+
+.listening-to {
+  margin: 0;
+  padding: 0; }
+
+.jam-avatar {
+  width: 85px; }
+
+.jam-images {
+  float: left;
+  margin-right: 0;
+  width: 142px; }
+
+.jam-body {
+  float: left; }
+
+.user-avatar {
+  position: relative;
+  z-index: 2;
+  top: 15px;
+  right: 33px;
+  width: 40px;
+  background: #fff;
+  padding: 2px;
+  border: 1px solid #dedede;
+  box-shadow: 0 1px 1px #bababa; }
+
+.listening-to {
+  color: #bababa;
+  text-transform: lowercase;
+  font-size: 1rem; }
+
+.jam-title, .jam-artist {
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+
+.jam-header {
+  margin-bottom: 1rem; }
+
+.jam-title {
+  font-weight: bold;
+  font-size: 2.67rem; }
+
+.jam-artist span {
+  color: #666; }
+
+.jam-caption {
+  color: #8a8a8a;
+  font-size: 1.33rem;
+  height: 1.33rem;
+  margin-bottom: 0.5rem; }
+
+.jam-posted {
+  font-size: 1rem;
+  color: #8a8a8a;
+  display: block; }
+  .jam-posted date {
+    border-bottom: 1px dotted #cecece; }
+
+.jam-cite {
+  font-size: 0.8rem;
+  color: #8a8a8a;
+  font-style: normal; }
+
+/*# sourceMappingURL=style.css.map */
