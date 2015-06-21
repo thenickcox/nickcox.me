@@ -1,3 +1,18 @@
+class TemplateManager
+  tmj:
+    document.getElementById('thatsmyjam')
+
+  retrieveTemplate: ->
+    req = new XMLHttpRequest()
+    req.onload = ->
+      div = document.createElement('div')
+      div.innerHTML = this.responseText
+      window.mustacheTemplate = div
+    templateUrl = @tmj.dataset.templateUrl
+    req.open('GET', templateUrl, { async: false})
+    req.send()
+
+
 class App
   constructor: (request) ->
     @request = request
@@ -16,8 +31,7 @@ class App
     @request.addEventListener 'loadend', ->
       if @status is 200 && @response
         resp = self.responseAsJSON(@response)
-        templ = document.getElementById('tmj-template').innerHTML
-        rendered = Mustache.render(templ, resp)
+        rendered = Mustache.render(window.mustacheTemplate.innerHTML, resp)
         document.getElementById('thatsmyjam').innerHTML = rendered
         self.reformatDate(resp)
 
@@ -32,7 +46,10 @@ class App
     newDate = resp.jam.creationDate.split(' ').slice(0, 4).join(' ')
     dateEl.innerHTML = newDate
 
+templateManager = new TemplateManager()
+templateManager.retrieveTemplate()
 
 req = new XMLHttpRequest()
 window.app = new App(req)
 window.app.sendRequest().populateDom()
+
