@@ -34,6 +34,11 @@ class App
         rendered = Mustache.render(window.mustacheTemplate.innerHTML, resp)
         document.getElementById('thatsmyjam').innerHTML = rendered
         self.reformatDate(resp)
+      if resp.person.hasCurrentJam
+        $('noJam').innerHTML = ''
+      else
+        $('hasJam').innerHTML = ''
+
 
   responseAsJSON: (resp) =>
     JSON.parse(resp)
@@ -43,8 +48,10 @@ class App
 
   reformatDate: (resp) ->
     dateEl = document.getElementById('jam-creation-date')
-    newDate = resp.jam.creationDate.split(' ').slice(0, 4).join(' ')
+    newDate = resp.jam?.creationDate.split(' ').slice(0, 4).join(' ')
     dateEl.innerHTML = newDate
+
+$ = (el) -> document.getElementById(el)
 
 templateManager = new TemplateManager()
 templateManager.retrieveTemplate()
@@ -52,4 +59,3 @@ templateManager.retrieveTemplate()
 req = new XMLHttpRequest()
 window.app = new App(req)
 window.app.sendRequest().populateDom()
-
