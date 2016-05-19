@@ -1,4 +1,6 @@
 $color: #1e967b
+$sans: "Gotham SSm A","Gotham SSm B", Helvetica, sans-serif
+$headline: "Tungsten Cond A","Tungsten Cond B"
 
 body
   height: 100%
@@ -6,7 +8,7 @@ body
   font-size: 1.9rem
   line-height: 1.55em
   color: #323232
-  font-family: "Gotham SSm A","Gotham SSm B"
+  font-family: $sans
   font-weight: 300
 
 .color-band
@@ -15,14 +17,25 @@ body
   background: #1e967b
   -webkit-transition: background .15s ease-in-out
 
+a.back
+  position: relative
+  bottom: 30px
+  font-size: 17px
+
+.intro-container
+  text-align: center
+
 .container
   width: 92%
   max-width: 800px
   margin: 4em auto
-  text-align: center
+  @media (max-width: 600px)
+    margin: 2em auto
+  &.projects
+    margin-bottom: 2px
 
-h1
-  font-family: "Tungsten Cond A","Tungsten Cond B"
+h1:not(.intro)
+  font-family: $headline
   font-weight: 600
   font-style: normal
   line-height: .8
@@ -32,7 +45,15 @@ h1
   text-transform: uppercase
   letter-spacing: .015em
   text-align: center
-  margin-bottom: -1rem
+
+h1.intro
+  line-height: 1.05
+  margin-top: 20px
+  letter-spacing: -1px
+  @media(max-width: 600px)
+    text-align: left
+    font-size: 50px
+
 
 h2
   font-family: "Gotham SSm A","Gotham SSm B"
@@ -54,6 +75,13 @@ ul
     @media (screen and max-width: 450px)
       font-size: 1.33rem
 
+.project-explanation
+  margin-bottom: 45px
+  a
+    border-bottom: 2px solid
+    &:hover
+      border-bottom: 2px solid $color - 20
+
 a
   color: $color
   text-decoration: none
@@ -74,118 +102,82 @@ hr
   background: #dedede
   height: 1px
 
-/* THIS IS MY JAM! */
-
-#thatsmyjam
+.bio-container
+  width: 80%
+  max-width: 1000px
+  margin: 0 auto
   text-align: left
+  a:hover
+    border-bottom: 2px solid $color - 20
+  @media(max-width: 600px)
+    width: 100%
+
+.networks
+  display: flex
+  justify-content: space-between
+
+/* PROJECTS */
+
+section
+  width: 100%
   display: inline-block
-
-.listening-to
-  margin: 0
-  padding: 0
-
-.jam-avatar
-  width: 85px
-
-.jam-images
-  float: left
-  margin-right: 0
-  width: 142px
-
-.jam-body
-  float: left
-
-.user-avatar
-  position: relative
-  z-index: 2
-  top: 15px
-  right: 33px
-  width: 40px
-  background: #fff
-  padding: 2px
-  border: 1px solid #dedede
-  box-shadow: 0 1px 1px #bababa
-
-.listening-to
-  color: #bababa
-  text-transform: lowercase
-  font-size: 1rem
-
-.jam-title, .jam-artist
-  margin: 0
-  padding: 0
-  text-align: left
-
-.jam-header
-  margin-bottom: 1rem
-
-.jam-title
-  font-weight: bold
-  font-size: 2.67rem
-
-.jam-artist span
-  color: #666
-
-.jam-caption
-  color: #8a8a8a
-  font-size: 1.33rem
-  height: 1.33rem
-  margin-bottom: 0.5rem
-
-.jam-posted, .jam-cite
-  font-size: 1rem
-  color: #8a8a8a
-  display: block
-  date
-    border-bottom: 1px dotted #cecece
-
-#noJam
+  font-size: 17px
+  margin-bottom: 40px
   p
-    margin: 0 0 1.33rem
-    font-size: 1.33rem
-    line-height: 1.35em
+    line-height: 1.5
+  img
+    float: left
+    width: 18%
+    margin-right: 2%
+    @media (max-width: 600px)
+      float: none
+      width: 100%
+      margin: 0 0 15px
+  .content
+    float: left
+    text-align: left
+    width: 80%
+    @media (max-width: 600px)
+      float: none
+      width: 90%
+  dl
+    margin-top: 0
+  dt
+    font-family: $headline
+    font-size: 23px
+    color: #454545
+    text-transform: uppercase
+    line-height: 1
+    letter-spacing: 1px
+    margin-bottom: 2px
+  dd
+    margin-left: 0
+    line-height: 1.3
+    margin-bottom: 20px
+    p:first-child
+      margin-top: 0
+  iframe
+    width: 100%
 
-$border: rgba(0, 0, 0, 0.2)
+.talk
+  margin-bottom: 80px
 
-.finding
-  float: left
+.talk h1
+  font-family: $sans
+  font-size: 35px
+  margin-bottom: 25px
+  text-transform: none
+  line-height: 1.15
 
-.loading
-  margin: 0 0 0 8px
-  font-size: 1.25px
-  position: relative
-  text-indent: -9999em
-  border-top: 1.1em solid $color
-  border-right: 1.1em solid $color
-  border-bottom: 1.1em solid $color
-  border-left: 0
-  -webkit-animation: load 0.6s infinite linear
-  animation: load 0.6s infinite linear
-  border-radius: 20px
-  width: 26px
-  height: 26px
-  display: block
-  float: left
-  position: relative
-  top: 10px
-  &:after
-    border-radius: 50%
-    width: 10em
-    height: 10em
-
-@-webkit-keyframes load
-  0%
-    -webkit-transform: rotate(0deg)
-    transform: rotate(0deg)
-  100%
-    -webkit-transform: rotate(360deg)
-    transform: rotate(360deg)
-
-
-@keyframes load
-  0%
-    -webkit-transform: rotate(0deg)
-    transform: rotate(0deg)
-  100%
-    -webkit-transform: rotate(360deg)
-    transform: rotate(360deg)
+footer
+  border: 1px solid #f2f5f6
+  margin-top: 40px
+  padding: 40px 0
+  background: #fafefd
+  .container
+    margin: 0 auto
+  p
+    font-size: 19px
+    letter-spacing: -0.01em
+    line-height: 1.6
+    color: #323232

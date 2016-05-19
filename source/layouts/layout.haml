@@ -11,9 +11,33 @@
     = stylesheet_link_tag 'normalize', 'style'
 
   %body
-    .color-band
-    .container
+    .color-band{class: home? ? 'home' : current_page.path.split('.').first}
+    .container{class: home? ? 'home' : current_page.path.split('.').first}
+
+      - unless home?
+        %a.back{href:'/'} &laquo; Home
       = yield
 
-  = javascript_include_tag 'mustache.min'
-  = javascript_include_tag 'app'
+    - unless home?
+      %footer
+        .container
+          %p
+            Thanks for getting this far. You can go
+            %a{href: '/'} home
+            or see my
+            = succeed ',' do
+              %a{href: '/projects'} projects
+            my
+            = succeed ',' do
+              %a{href: '/talks'} talks
+            = succeed ',' do
+              %a{href: 'http://blog.nickcox.me'} blog
+            or a short
+            = succeed '.' do
+              %a{href: '/about'} bio
+            You can also visit me on
+            %a{href: 'https://github.com/thenickcox'} GitHub
+            or
+            = succeed '.' do
+              %a{href: 'https://twitter.com/_thenickcox'} Twitter
+

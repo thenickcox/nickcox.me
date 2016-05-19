@@ -1,0 +1,131 @@
+%h1 Projects
+
+%p.project-explanation
+  View my
+  %a{href: '#professional'} work-related
+  and
+  = succeed '.' do
+    %a{href: '#side-projects'} side projects
+
+
+%a{name: 'professional'}
+%h2 Professional Projects
+%section
+  %img{src: '/images/projects/wiki.png'}
+  .content
+    %dl
+      %dt Site
+      %dd WikiMedia Education Foundation (via WINTR)
+      %dt Role
+      %dd Full-stack developer
+      %dt Technologies
+      %dd Ruby on Rails, MySQL, React.js, Mocha.js, CoffeeScript, ES2015, Stylus, Haml, Gulp
+      %dt Summary
+      %dd
+        %p The WikiMedia Education Foundation approached WINTR with a very interesting project. The central problem was clear: How can we grow the Wikipedia editing community, more accessible to college students, and aid college professors to create syllabi to assign the editing or creation of Wikipedia articles for course credit.
+        %p I built several core features of the site over the course of about eight months. I was responsible for all aspects of feature delivery with the exception of visual desgin: the database design, Rails API architecture and implementation, and front end development in React.js. I utilized test-driven development throughout with RSpec, Capybara, and Mocha.js.
+
+%section
+  %img{src: '/images/projects/ctl.png'}
+  .content
+    %dl
+      %dt Site
+      %dd CenturyLink Cloud (via WINTR)
+      %dt Role
+      %dd Full-stack developer
+      %dt Technologies
+      %dd Node.js, CoffeeScript, Travis CI
+      %dt Summary
+      %dd
+        %p In CenturyLink Cloud’s bid to aggregate several cloud hosting capabilities under one roof, one aspect crucial to their ability to provide excellent service among all of their offerings was their knowledge base.
+        %p I built a custom test suite to run against CenturyLink Cloud’s knowledge base documentation. It parsed the Markdown documents and ensured proper formatting, correct metadata, and valid links and images. I also built it in a modular fashion: parsers were pluggable modules that were orchestrated by the parsing functionality to keep the suite extensible and maintainable.
+
+%section
+  %img{src: '/images/projects/fandango.png'}
+  .content
+    %dl
+      %dt Site
+      %dd FritoLay2Go (via WINTR)
+      %dt Role
+      %dd Full-stack developer
+      %dt Technologies
+      %dd PHP, Laravel, MySQL, Custom Linux &amp; Apache configuration, Stylus, ES2015, PHPUnit, Capistrano, Gulp, Webpack
+      %dt Summary
+      %dd
+        %p FritoLay needed a compelling marketing site that could allow consumers to redeem UPC codes from their packages in return for a coupon code redeemable on the Fandango.com site for kids’ movie passes.
+        %p From an existing design, I implemented the entire site from start to finish. This included database modeling for tables with up to 10MM rows, MySQL, the Laravel web framework, PHP, ES2015, and Stylus.
+        %p The site also needed to be deployed on a dedicated hosting an environment, so I also performed all the server configuration and web server setup from scratch, and configured the application for automated deployments to both the production and staging environments.
+
+%section
+  %img{src: '/images/projects/navigatingcancer.png'}
+  .content
+    %dl
+      %dt Site
+      %dd Navigating Cancer
+      %dt Role
+      %dd Software Engineer
+      %dt Technologies
+      %dd Ruby on Rails, Backbone.js, Jasmine, Haml, Sass, RSpec, Cucumber, MySQL
+      %dt Summary
+      %dd
+        %p Navigating Cancer is a large web application with over 880,000 users, including oncologists, oncology patients, and a large and growing social support community. Main areas of functionality included a mobile medication adherence platform; medical oncology records, labs, and appointment scheduling; patient medical form completion; and support forums chemotherapy articles, and resources.
+        %p Over the course of three years, I was a core developer on the web application, deliverying features from the database to the front end and everywhere in between. In 2012, I completely redesigned and reimplmented the patient forms workflow, leading to a significant decrease in support calls. In 2013, I performed a large refactor of the transactional email funcationality and of the application and redesigned the templates for over 20 types of email at a volume of over 250,000 weekly emails. In 2014, I completed the development of a new, responsive homepage, boasting a 325%+ increase in average page load time. In 2014 and 2015, I was one of the core developers in the rewriting of the user authentication process using microservices, resulting in increased HIPAA compliance and security for all 880,000+ users of the site.
+
+%a{name: 'side-projects'}
+%h2 Side Projects
+
+%section
+  %img{src: '/images/projects/code.png'}
+  .content
+    %dl
+      %dt Name
+      %dd Syllabize
+      %dt Role
+      %dd Creator
+      %dt Technologies
+      %dd Ruby, RSpec
+      %dt Summary
+      %dd
+        %p Syllabize is a simple syllable parser written in Ruby. It is available as a gem, and its source code is available on GitHub.
+
+%section
+  %img{src: '/images/projects/code.png'}
+  .content
+    %dl
+      %dt Name
+      %dd Support the Artist
+      %dt Role
+      %dd Creator
+      %dt Technologies
+      %dd Go, Last.fm API, IFTTT API, cron
+      %dt Summary
+      %dd
+        %p Ever since I started using Spotify exclusively for listening to music, I have developed a bad habit of forgetting to actually buy albums and support the artist. This project runs on a cron job monthly. It gathers my most listened-to album over the past 30 days and sends me a text message telling me the number of listens and reminding me to buy the album.
+
+%section
+  %img{src: '/images/projects/code.png'}
+  .content
+    %dl
+      %dt Name
+      %dd Weather Alert
+      %dt Role
+      %dd Creator
+      %dt Technologies
+      %dd Go, openweathermap.org API, IFTTT API, cron
+      %dt Summary
+      %dd
+        %p I live on a boat here in Seattle, and our water supply comes through a hose in the marina. There are few Seattle nights on which the temperature drops below freezing, but when it does, our water supply hose freezes if we forget to turn it off, and leaves us without water for several hours in the morning. This project, written in Go, runs on a cron job nightly and, if the temperature is forecast to go below freezing, sends me a text message reminding me to disconnect our water supply hose.
+
+%section
+  %img{src: '/images/projects/two_hard_problems.png'}
+  .content
+    %dl
+      %dt Name
+      %dd Two Hard Problems
+      %dt Role
+      %dd Creator
+      %dt Technologies
+      %dd Node.js, New York Times API, Twitter API, ES2015
+      %dt Summary
+      %dd
+        %p According to Martin Fowler, the only two hard things in computer science are cache invalidation and naming things. There have been many formulaic jokes made on this theme, and I wondered if I could automate that process. The Two Hard Problems bot runs hourly, scrapes the New York Times API for interesting headlines, combines them into a joke, and posts it to Twitter.

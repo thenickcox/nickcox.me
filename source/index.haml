@@ -1,16 +1,33 @@
-%img.portrait{ src: 'images/nick_cox_portrait.jpg' }
-%h1 Nick Cox
-%h2 Software Engineer
-%ul.links
-  %li
-    %a{ href: 'http://blog.nickcox.me' } Blog
-  %li
-    %a{ href: 'https://github.com/thenickcox' } GitHub
-  %li
-    %a{ href: 'mailto:nick@nickcox.me' } Contact
+.intro-container
+  %img.portrait{ src: 'images/nick_cox_portrait.jpg' }
 
-%hr
+  %h1.intro
+    Hi, I’m Nick&nbsp;Cox, a software engineer from Seattle.
 
-#thatsmyjam{ 'data-tmj-username' => 'thenickcox', 'data-template-url' => 'tmj-template.mst' }
-  %span.finding Finding the jams…
-  %span.loading
+.bio-container
+  %p
+    I’m the lead engineer at
+    = succeed ',' do
+      %a{href: 'http://wintr.us', class: 'projects'} WINTR
+    where I work on
+    = succeed '.' do
+      %a{href: '/projects', class: 'projects'} several projects
+    in many different languages.
+    I also occasionally
+    %a{href: '/talks', class: 'talks'} give talks
+    and
+    = succeed '.' do
+      %a{href: 'http://blog.nickcox.me', class: 'blog'} write about software development
+
+  %p
+    If you’re really curious, you can read more
+    = succeed '.' do
+      %a{href: '/about', class: 'about'} about me
+
+  %ul.networks
+    %li
+      %a{href: 'https://github.com/thenickcox', class: 'github'} GitHub
+    %li
+      %a{href: 'https://github.com/thenickcox', class: 'twitter'} Twitter
+    %li
+      %a{href: 'https://github.com/thenickcox', class: 'email'} Email

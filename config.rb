@@ -53,20 +53,32 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+activate :directory_indexes
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript
+  # activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+helpers do
+  def iframe_opts(id)
+    {width: "560",  height: "315", src: "https://www.youtube.com/embed/#{id}", frameborder: "0", allowfullscreen: "allowfullscreen"}
+  end
+
+  def home?
+    current_page.path == 'index.html'
+  end
 end
