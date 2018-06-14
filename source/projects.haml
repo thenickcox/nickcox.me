@@ -2,7 +2,7 @@
 
 %p.project-explanation
   View my
-  %a{href: '#professional'} work-related
+  %a{href: '#professional'} professional
   and
   = succeed '.' do
     %a{href: '#side-projects'} side projects
@@ -10,6 +10,53 @@
 
 %a{name: 'professional'}
 %h2 Professional Projects
+%section
+  %img{src: '/images/projects/10000ft.png'}
+  .content
+    %dl
+      %dt Site
+      %dd 10,000ft
+      %dt Role
+      %dd Full-stack software engineer
+      %dt Technologies
+      %dd Ruby on Rails 5, RSpec, MySQL, React, Redux, Webpack, ES6
+      %dt Summary
+      %dd
+        %p I have been a full-stack software engineer at 10,000ft since July of 2016. In that time, I've created the technical design for and implemented several features.
+        %p Notable achievements include:
+        %ul
+          %li
+            = succeed ':' do
+              %strong 2018
+            I improved the performance of our Rails/RSpec API test suite by 19% in an 80K LOC codebase
+          %li
+            = succeed ':' do
+              %strong 2017
+            I re-engineered the analytics page of the application taking the 95th percentile time-to-interact (TTI) from nearly 30 seconds to 250ms
+          %li
+            = succeed ':' do
+              %strong 2016
+            I led the feature team for a full rewrite of the reporting module of the product in React and Redux, resulting in up to a 400% improvement for the initial page rendering
+
+%section
+  %img{src: '/images/projects/elephant.png'}
+  .content
+    %dl
+      %dt Site
+      %dd African Elephant Database (via Flint)
+      %dt Role
+      %dd Front-end software engineer
+      %dt Technologies
+      %dd React.js, React Router, ES2015, Webpack, GeoJSON, Leaflet
+      %dt Summary
+      %dd
+        %p
+          = succeed ',' do
+            %a{ href: 'http://www.vulcan.com/'} Vulcan
+          Paul Allen’s brainchild, partnered with the African Elephant Specialist Group to build a database of all elephants on the continent. The database would be updated yearly to enable researchers to track the animals, their numbers, and their migration patterns, among other data.
+        %p They tasked Seattle design agency Flint with building an interactive web application on top of their Ruby on Rails and PostgreSQL-based database to enable researchers and elephant lovers alike to understand more about these majestic and enigmatic creatures.
+        %p I was the initial engineer on the project and built a vast majority of the core functionality, including map integration and interactivity, core UI interactions, routing, state management, and more.
+
 %section
   %img{src: '/images/projects/wiki.png'}
   .content
@@ -69,7 +116,25 @@
       %dt Summary
       %dd
         %p Navigating Cancer is a large web application with over 880,000 users, including oncologists, oncology patients, and a large and growing social support community. Main areas of functionality included a mobile medication adherence platform; medical oncology records, labs, and appointment scheduling; patient medical form completion; and support forums chemotherapy articles, and resources.
-        %p Over the course of three years, I was a core developer on the web application, deliverying features from the database to the front end and everywhere in between. In 2012, I completely redesigned and reimplmented the patient forms workflow, leading to a significant decrease in support calls. In 2013, I performed a large refactor of the transactional email funcationality and of the application and redesigned the templates for over 20 types of email at a volume of over 250,000 weekly emails. In 2014, I completed the development of a new, responsive homepage, boasting a 325%+ increase in average page load time. In 2014 and 2015, I was one of the core developers in the rewriting of the user authentication process using microservices, resulting in increased HIPAA compliance and security for all 880,000+ users of the site.
+        %p Over the course of three years, I was a core developer on the web application, deliverying features from the database to the front end and everywhere in between.
+        %p Notable achievements include:
+        %ul
+          %li
+            = succeed ':' do
+              %strong 2015
+            I was one of the core developers in the rewriting of the user authentication process using microservices, resulting in increased HIPAA compliance and security for all 880,000+ users of the site.
+          %li
+            = succeed ':' do
+              %strong 2014
+            I completed the development of a new, responsive homepage, boasting a 325%+ increase in average page load time.
+          %li
+            = succeed ':' do
+              %strong 2013
+            I performed a large refactor of the transactional email funcationality and of the application and redesigned the templates for over 20 types of email sent at a volume of over 250,000 per week.
+          %li
+            = succeed ':' do
+              %strong 2012
+            I completely redesigned and reimplmented the patient forms workflow, leading to a significant decrease in support calls.
 
 %a{name: 'side-projects'}
 %h2 Side Projects
